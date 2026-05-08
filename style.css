@@ -1,1 +1,36 @@
-@import 'tailwindcss'
+@import "tailwindcss";
+
+.tilt-card {
+  perspective: 900px;
+}
+
+.tilt-inner {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tilt-inner:hover {
+  box-shadow: 0 24px 60px rgb(16 40 75 / 0.18);
+}
+
+.tilt-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  opacity: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgb(255 255 255 / 0.45),
+    rgb(255 255 255 / 0.08) 28%,
+    transparent 55%
+  );
+  transition: opacity 180ms ease;
+}
+
+.tilt-inner:hover .tilt-glare {
+  opacity: 1;
+}

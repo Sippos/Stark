@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stark</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
         <!-- FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -320,69 +322,62 @@
   </section>
 
 <section class="mx-auto max-w-7xl px-6 py-16">
-  <div class="mb-8 flex items-end justify-between gap-6">
-    <div>
+    <div class="mb-8 flex items-end justify-between gap-6">
+      <div>
       <h1 class="m-0 text-5xl leading-[1.1] font-black tracking-[-0.01em] text-[#10284b]">
-        Featured Collections
+        New in the Library
       </h1>
-
       <p class="mb-6 text-xl leading-[1.5] text-[#10284b]">
-        Handpicked and curated collections around accessibility.
+        Newly added accessibility resources, guides, and more.
       </p>
     </div>
+    </div>
 
-    <a
-      href="#"
-      class="whitespace-nowrap font-mono text-base font-bold uppercase tracking-[0.07em] text-[#381fd1] underline transition-colors hover:text-[#7e6de9]"
-    >
-      View all
+<div class="mb-16 grid auto-rows-[1fr] grid-cols-[repeat(auto-fill,_261px)] gap-8">
+<article class="tilt-card">
+  <a href="#" class="tilt-inner relative block h-[350px] w-[261px] overflow-hidden rounded-lg no-underline">
+    <img
+      src="https://res.cloudinary.com/stark-lab/image/upload/v1653845742/library_collection_Collection_Boundless_Disability_Employment_c297d236d9.png"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+
+    <span class="tilt-glare"></span>
+
+    <h4 class="relative z-10 p-8 text-2xl font-black leading-tight text-[#10284b]">
+      Disability Employment
+    </h4>
+  </a>
+</article>
+
+  <article class="tilt-card">
+    <a href="#" class="tilt-inner relative block h-[350px] w-[261px] overflow-hidden rounded-lg bg-[#ece8f6] no-underline">
+      <h4 class="relative z-10 p-8 text-2xl font-black leading-tight text-[#10284b]">
+        Making Accessible Color Combos
+      </h4>
+
+      <img
+        src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_making_accessible_color_combos_42c8d90a99.png"
+        alt=""
+        class="absolute bottom-0 left-0 w-full"
+      />
     </a>
-  </div>
+  </article>
 
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-    <article>
-      <a href="#" class="relative block h-[350px] overflow-hidden rounded-lg bg-[#b7e5f4]">
-        <h4 class="relative z-10 p-8 text-2xl font-black leading-tight text-[#10284b]">
-          Disability Employment
-        </h4>
+  <article class="tilt-card">
+    <a href="#" class="tilt-inner relative block h-[350px] w-[261px] overflow-hidden rounded-lg bg-[#efefe3] no-underline">
+      <h4 class="relative z-10 p-8 text-2xl font-black leading-tight text-[#10284b]">
+        Tips and Tricks for Inclusive Social Media
+      </h4>
 
-        <img
-          src="https://res.cloudinary.com/stark-lab/image/upload/v1653845742/library_collection_Collection_Boundless_Disability_Employment_c297d236d9.png"
-          alt=""
-          class="absolute bottom-0 left-0 w-full"
-        />
-      </a>
-    </article>
-
-    <article>
-      <a href="#" class="relative block h-[350px] overflow-hidden rounded-lg bg-[#b7e5f4]">
-        <h4 class="relative z-10 p-8 text-2xl font-black leading-tight text-[#10284b]">
-          Making Accessible Color Combos
-        </h4>
-
-        <img
-          src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_making_accessible_color_combos_42c8d90a99.png"
-          alt=""
-          class="absolute bottom-0 left-0 w-full"
-        />
-      </a>
-    </article>
-
-    <article>
-      <a href="#" class="relative block h-[350px] overflow-hidden rounded-lg bg-[#b7e5f4]">
-        <h4 class="relative z-10 p-8 text-2xl font-black leading-tight text-[#10284b]">
-          Tips and Tricks for Inclusive Social Media
-        </h4>
-
-        <img
-          src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_Inclusive_Social_Media_b9669e6d39.png"
-          alt=""
-          class="absolute bottom-0 left-0 w-full"
-        />
-      </a>
-    </article>
-  </div>
-</section>
+      <img
+        src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_Inclusive_Social_Media_b9669e6d39.png"
+        alt=""
+        class="absolute bottom-0 left-0 w-full"
+      />
+    </a>
+  </article>
+</div>
       
 </main>
 
