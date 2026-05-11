@@ -1,36 +1,45 @@
 @import "tailwindcss";
 
+body {
+  font-family: Inter, sans-serif;
+  color: #10284b;
+}
+
 .tilt-card {
   perspective: 900px;
 }
 
 .tilt-inner {
   transform-style: preserve-3d;
-  will-change: transform;
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease;
+  transition: transform 180ms ease;
+  box-shadow: none;
 }
 
-.tilt-inner:hover {
+/* .tilt-inner:hover {
   box-shadow: 0 24px 60px rgb(16 40 75 / 0.18);
-}
+} */
 
 .tilt-glare {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  z-index: 5;
   opacity: 0;
   background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    rgb(255 255 255 / 0.45),
-    rgb(255 255 255 / 0.08) 28%,
-    transparent 55%
+    circle at var(--x, 75%) var(--y, 75%),
+    rgba(255, 255, 255, 0.32),
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 100%
   );
   transition: opacity 180ms ease;
 }
 
-.tilt-inner:hover .tilt-glare {
+.tilt-card:hover .tilt-glare {
   opacity: 1;
+}
+
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
