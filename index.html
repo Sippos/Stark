@@ -139,18 +139,42 @@
     <!-- Main -->
     <main class="bg-white">
       <div
-        class="mx-auto grid max-w-[1260px] grid-cols-1 gap-[64px] px-6 py-[64px] lg:grid-cols-[280px_1fr]"
+        class="mx-auto grid max-w-[1260px] grid-cols-1 gap-[40px] px-6 py-[40px] min-[840px]:grid-cols-[280px_1fr] min-[840px]:gap-[48px] min-[1240px]:gap-[64px] min-[1240px]:py-[64px]"
       >
         <!-- SIDEBAR -->
-        <aside class="block lg:w-[280px] lg:pt-[4px]">
+        <aside class="min-[840px]:w-[280px] min-[840px]:pt-[4px]">
+          <nav class="mb-[22px] min-[1240px]:mb-[52px] min-[1240px]:pl-[24px]">
+            <ul
+              class="flex items-center gap-8 text-[16px] font-semibold leading-[1.4] text-[#10284b] min-[1240px]:block min-[1240px]:space-y-[26px]"
+            >
+              <li>
+                <a href="#" class="block text-[#381fd1]">Library</a>
+              </li>
+
+              <li>
+                <a href="#" class="block hover:text-[#381fd1]">Collections</a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 hover:text-[#381fd1] min-[1240px]:justify-between"
+                >
+                  Categories
+                  <i class="fa-solid fa-chevron-down text-[11px]"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
           <label
             for="library-search"
-            class="mb-[10px] block text-[16px] font-normal leading-[1.4] text-[#10284b]"
+            class="sr-only text-[16px] font-normal leading-[1.4] text-[#10284b] min-[1240px]:not-sr-only min-[1240px]:mb-[10px] min-[1240px]:block"
           >
             Search Library
           </label>
 
-          <div class="relative mb-[32px]">
+          <div class="relative mb-[28px] min-[840px]:mb-[32px]">
             <i
               class="fa-solid fa-magnifying-glass absolute left-[16px] top-1/2 -translate-y-1/2 text-[18px] text-[#8f95a3]"
             ></i>
@@ -162,33 +186,9 @@
             />
           </div>
 
-          <nav class="mb-[52px] pl-[24px]">
-            <ul
-              class="space-y-[26px] text-[16px] font-semibold leading-[1.4] text-[#10284b]"
-            >
-              <li>
-                <a href="#" class="block text-[#381fd1]"> Home </a>
-              </li>
-
-              <li>
-                <a href="#" class="block text-[#10284b] hover:text-[#381fd1]">
-                  Collections
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  class="flex items-center justify-between text-[#10284b] hover:text-[#381fd1]"
-                >
-                  Categories
-                  <i class="fa-solid fa-chevron-down text-[11px]"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="rounded-lg bg-[#f3f0ff] px-[24px] py-[24px]">
+          <div
+            class="hidden rounded-lg bg-[#f3f0ff] px-[24px] py-[24px] min-[840px]:block"
+          >
             <h2
               class="mb-[12px] text-[24px] font-black leading-[1.12] tracking-[-0.03em] text-[#10284b]"
             >
@@ -211,20 +211,22 @@
         </aside>
 
         <!-- RIGHT CONTENT -->
-        <div>
+        <div class="min-[840px]:order-1">
           <!-- NEW IN LIBRARY -->
-          <section class="mb-[76px]">
-            <div class="mb-[30px]">
-              <div class="mb-[6px] flex items-start justify-between gap-6">
+          <section
+            class="mb-[56px] border-t border-[#d8d8e0] pt-[36px] min-[840px]:mb-[72px] min-[1240px]:border-t-0 min-[1240px]:pt-0"
+          >
+            <div class="mb-[26px]">
+              <div class="mb-[8px] flex items-center justify-between gap-4">
                 <h1
-                  class="m-0 text-[48px] font-black leading-[1.1] tracking-[-0.045em] text-[#10284b]"
+                  class="m-0 max-w-[620px] text-[40px] font-black leading-[1.05] tracking-[-0.045em] text-[#10284b] min-[700px]:text-[48px]"
                 >
                   New in the Library
                 </h1>
 
                 <a
                   href="#"
-                  class="mt-[13px] whitespace-nowrap font-mono text-[16px] font-bold uppercase leading-[1.4] tracking-[0.08em] text-[#381fd1] underline underline-offset-2 hover:text-[#7e6de9]"
+                  class="shrink-0 whitespace-nowrap font-mono text-[14px] font-bold uppercase leading-[1.4] tracking-[0.08em] text-[#381fd1] underline underline-offset-2 hover:text-[#7e6de9] min-[700px]:text-[16px]"
                 >
                   VIEW ALL
                 </a>
@@ -237,7 +239,9 @@
               </p>
             </div>
 
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div
+              class="grid grid-cols-1 gap-8 min-[840px]:grid-cols-1 min-[1200px]:grid-cols-2 min-[1240px]:grid-cols-3"
+            >
               <article>
                 <a
                   href="#"
@@ -392,20 +396,18 @@
           </section>
 
           <!-- FEATURED COLLECTIONS -->
-          <section class="mb-[96px]">
-            <div class="mb-[22px]">
-              <div
-                class="mb-[6px] flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
-              >
+          <section class="mb-[56px]">
+            <div class="mb-[26px]">
+              <div class="mb-[8px] flex items-center justify-between gap-4">
                 <h2
-                  class="m-0 text-[36px] font-black leading-[1.05] tracking-[-0.045em] text-[#10284b] md:text-[48px]"
+                  class="m-0 max-w-[620px] text-[40px] font-black leading-[1.05] tracking-[-0.045em] text-[#10284b] min-[700px]:text-[48px]"
                 >
                   Featured Collections
                 </h2>
 
                 <a
                   href="#"
-                  class="mt-[13px] whitespace-nowrap font-mono text-[16px] font-bold uppercase leading-[1.4] tracking-[0.08em] text-[#381fd1] underline underline-offset-2 hover:text-[#7e6de9]"
+                  class="shrink-0 whitespace-nowrap font-mono text-[14px] font-bold uppercase leading-[1.4] tracking-[0.08em] text-[#381fd1] underline underline-offset-2 hover:text-[#7e6de9] min-[700px]:text-[16px]"
                 >
                   VIEW ALL
                 </a>
@@ -418,11 +420,13 @@
               </p>
             </div>
 
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+            <div
+              class="grid grid-cols-1 gap-8 min-[600px]:grid-cols-2 min-[840px]:grid-cols-1 min-[1000px]:grid-cols-2 min-[1240px]:grid-cols-3"
+            >
               <article class="tilt-card">
                 <a
                   href="#"
-                  class="tilt-inner relative block h-[350px] overflow-hidden rounded-lg no-underline"
+                  class="tilt-inner relative block h-[350px] w-full max-w-[350px] overflow-hidden rounded-lg bg-[#f6f6ea] no-underline"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1653845742/library_collection_Collection_Boundless_Disability_Employment_c297d236d9.png"
@@ -432,30 +436,31 @@
 
                   <span class="tilt-glare"></span>
 
-                  <h4
+                  <h3
                     class="relative z-10 p-8 text-[24px] font-black leading-[1.08] tracking-[-0.035em] text-[#10284b]"
                   >
                     Disability Employment
-                  </h4>
+                  </h3>
                 </a>
               </article>
 
               <article class="tilt-card">
                 <a
                   href="#"
-                  class="tilt-inner relative block h-[350px] overflow-hidden rounded-lg bg-[#ece8f6] no-underline"
+                  class="tilt-inner relative block h-[350px] w-full max-w-[350px] overflow-hidden rounded-lg bg-[#f3f0ff] no-underline"
                 >
-                  <h4
+                  <h3
                     class="relative z-10 p-8 text-[24px] font-black leading-[1.08] tracking-[-0.035em] text-[#10284b]"
                   >
                     Making Accessible Color Combos
-                  </h4>
+                  </h3>
 
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_making_accessible_color_combos_42c8d90a99.png"
                     alt=""
-                    class="absolute bottom-0 left-0 w-full"
+                    class="absolute bottom-0 left-0 w-full object-cover"
                   />
+
                   <span class="tilt-glare"></span>
                 </a>
               </article>
@@ -463,19 +468,20 @@
               <article class="tilt-card">
                 <a
                   href="#"
-                  class="tilt-inner relative block h-[350px] overflow-hidden rounded-lg bg-[#efefe3] no-underline"
+                  class="tilt-inner relative block h-[350px] w-full max-w-[350px] overflow-hidden rounded-lg bg-[#f6f6ea] no-underline"
                 >
-                  <h4
+                  <h3
                     class="relative z-10 p-8 text-[24px] font-black leading-[1.08] tracking-[-0.035em] text-[#10284b]"
                   >
                     Tips and Tricks for Inclusive Social Media
-                  </h4>
+                  </h3>
 
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_Inclusive_Social_Media_b9669e6d39.png"
                     alt=""
-                    class="absolute bottom-0 left-0 w-full"
+                    class="absolute bottom-0 left-0 w-full object-cover"
                   />
+
                   <span class="tilt-glare"></span>
                 </a>
               </article>
