@@ -142,7 +142,7 @@
         class="mx-auto grid max-w-[1260px] grid-cols-1 gap-[64px] px-6 py-[64px] lg:grid-cols-[280px_1fr]"
       >
         <!-- SIDEBAR -->
-        <aside class="hidden lg:block w-[280px] pt-[4px]">
+        <aside class="block lg:w-[280px] lg:pt-[4px]">
           <label
             for="library-search"
             class="mb-[10px] block text-[16px] font-normal leading-[1.4] text-[#10284b]"
@@ -241,7 +241,7 @@
               <article>
                 <a
                   href="#"
-                  class="block h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
+                  class="block min-h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1] focus:outline-none focus-visible:border-[#381fd1] focus-visible:ring-4 focus-visible:ring-[#381fd1]/20"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1679345547/daisy_high_e2e14faca3.jpg"
@@ -266,7 +266,7 @@
               <article>
                 <a
                   href="#"
-                  class="block h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
+                  class="block min-h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1679345933/Screenshot_2023_03_20_at_3_58_45_PM_b615f86e7e.png"
@@ -291,7 +291,7 @@
               <article>
                 <a
                   href="#"
-                  class="block h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
+                  class="block min-h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1679345736/uni_profile_93228_9c84b19231.jpg"
@@ -316,7 +316,7 @@
               <article>
                 <a
                   href="#"
-                  class="block h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
+                  class="block min-h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1679345547/daisy_high_e2e14faca3.jpg"
@@ -341,7 +341,7 @@
               <article>
                 <a
                   href="#"
-                  class="block h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
+                  class="block min-h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1658845042/language_please_logo_d4b822280f.png"
@@ -367,7 +367,7 @@
               <article>
                 <a
                   href="#"
-                  class="block h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
+                  class="block min-h-[250px] rounded-lg border border-[#d8d8e0] bg-white p-6 transition hover:border-[#381fd1]"
                 >
                   <img
                     src="https://res.cloudinary.com/stark-lab/image/upload/v1653070254/library_author_google_7723cb132a.png"
@@ -394,12 +394,14 @@
           <!-- FEATURED COLLECTIONS -->
           <section class="mb-[96px]">
             <div class="mb-[22px]">
-              <div class="mb-[6px] flex items-start justify-between gap-6">
-                <h1
-                  class="m-0 text-[48px] font-black leading-[1.1] tracking-[-0.045em] text-[#10284b]"
+              <div
+                class="mb-[6px] flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <h2
+                  class="m-0 text-[36px] font-black leading-[1.05] tracking-[-0.045em] text-[#10284b] md:text-[48px]"
                 >
                   Featured Collections
-                </h1>
+                </h2>
 
                 <a
                   href="#"
@@ -416,7 +418,7 @@
               </p>
             </div>
 
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
               <article class="tilt-card">
                 <a
                   href="#"
